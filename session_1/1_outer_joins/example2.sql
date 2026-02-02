@@ -10,8 +10,8 @@
 
 -- write your sql code here
 
-SELECT Students.name AS students, Department.name AS department 
+SELECT name AS CourseName,student_id AS Students 
 FROM 
-Students JOIN Department 
-ON Students.department_id = Department.id
-ORDER BY department;
+Courses LEFT JOIN StudentCourses 
+ON Courses.id=StudentCourses.course_id 
+ORDER BY CourseName;
